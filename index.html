@@ -9,10 +9,10 @@
             font-family: Arial, sans-serif;
             padding: 20px;
             background-color: #f4f4f9;
-            color: #000; /* Changed text color to black */
+            color: #000; /* Text color set to black */
         }
         h1 {
-            color: #000; /* Changed header color to black */
+            color: #000; /* Header color set to black */
         }
         .calculator {
             max-width: 400px;
@@ -24,7 +24,7 @@
         }
         .subtitle {
             font-size: 14px;
-            color: #000; /* Changed subtitle color to black */
+            color: #000; /* Subtitle color set to black */
             text-align: center;
             margin-bottom: 15px;
         }
@@ -40,12 +40,13 @@
         .form-group label {
             flex: 1;
             margin-right: 10px;
+            white-space: nowrap; /* Prevent label from wrapping */
         }
         input[type="number"], input[type="range"] {
             flex: 2;
             padding: 10px;
             border-radius: 5px;
-            border: 1px solid #000; /* Changed border color to black */
+            border: 1px solid #000; /* Border color set to black */
             box-sizing: border-box;
         }
         input[type="range"] {
@@ -76,8 +77,8 @@
         button {
             width: 100%;
             padding: 10px;
-            background-color: #000; /* Changed button background color to black */
-            color: #fff; /* Changed button text color to white */
+            background-color: #000; /* Button background color set to black */
+            color: #fff; /* Button text color set to white */
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -94,23 +95,23 @@
         <div class="subtitle">Use this one when you think about promoting Gumroad products for others.</div>
         
         <div class="form-group">
-            <label for="salePrice">Enter Sale Price (€):</label>
+            <label for="salePrice">Sale Price ($):</label>
             <input type="number" id="salePrice" placeholder="e.g., 10" step="0.01">
         </div>
 
         <div class="form-group">
-            <label for="quantity">Select Quantity Sold:</label>
+            <label for="quantity">Quantity Sold:</label>
             <input type="range" id="quantity" min="1" max="500" value="100" oninput="updateQuantity(this.value)">
         </div>
-        <p style="text-align: center;">Quantity: <span id="quantityDisplay">100</span></p>
+        <p style="text-align: center; margin-top: -10px;">Quantity: <span id="quantityDisplay">100</span></p>
 
         <button onclick="calculateEarnings()">Calculate</button>
 
         <div class="result">
             <h2>Results:</h2>
-            <p><strong>Total Sale Price:</strong> <span id="totalPrice">0</span> €</p>
-            <p><strong>Your 50% Commission per Sale:</strong> <span id="affiliateEarnings">0</span> €</p>
-            <p><strong>Total Profit for <span id="totalQuantity">0</span> Sales:</strong> <span id="totalProfit">0</span> €</p>
+            <p><strong>Total Sale Price:</strong> <span id="totalPrice">0</span> $</p>
+            <p><strong>Your 50% Commission per Sale:</strong> <span id="affiliateEarnings">0</span> $</p>
+            <p><strong>Total Profit for <span id="totalQuantity">0</span> Sales:</strong> <span id="totalProfit">0</span> $</p>
         </div>
 
         <div class="info">
@@ -145,3 +146,4 @@
 
 </body>
 </html>
+
